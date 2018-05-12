@@ -99,6 +99,7 @@ h2 {
 #bio-text {
     width: 90%;
     animation: image-fade-in .5s;
+    line-height:1.5rem;
 }
 
 /* ________________________ PORTFOLIO _________________________ */
