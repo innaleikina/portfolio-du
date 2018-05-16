@@ -54,6 +54,11 @@ h2 {
     font-size: 11px;
     text-transform: uppercase;
     color: #777777;
+    transition: color .1s;
+}
+
+.nav-link:hover {
+    color: #4aaaa5;
 }
 
 #portfolio {
@@ -99,8 +104,60 @@ h2 {
 #bio-text {
     width: 90%;
     animation: image-fade-in .5s;
-    line-height:1.5rem;
+    line-height: 1.5rem;
 }
+
+@media only screen and (max-width:768px) {
+    #navigation {
+        width:100%;
+    }
+
+    #content-all{
+        width:90%;
+    }
+
+    #pic-bio{
+        width:80%;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    #navigation {
+       flex-direction:column;
+       width:100%;
+       /* border:1px red solid; */
+       justify-content:flex-start;
+       align-items:flex-start;
+    }
+   
+
+    #name{
+        text-align:center;
+        margin-bottom:20px;
+        width:91.3vw;
+        /* border:1px purple solid; */
+    }
+
+    nav{
+        display:flex;
+        justify-content:center;
+        margin-bottom:10px;
+        justify-content:center;
+        /* border:1px red solid; */
+        width:100%;
+    }
+
+    #content-container{
+        display:flex;
+        flex-direction:column;
+        margin:0 auto;
+    }
+
+    #pic {
+        margin:0 auto;
+    }
+}
+
 
 /* ________________________ PORTFOLIO _________________________ */
 
@@ -140,7 +197,6 @@ h2 {
     }
 }
 
-
 .portfolio-img img {
     width: 180px;
     height: 180px;
@@ -149,13 +205,13 @@ h2 {
     /* float:left; */
     z-index: 1;
     /* position:absolute; */
-    opacity:.8;
+    opacity: .8;
     animation: image-fade-in 1.5s;
 }
 
-.portfolio-img img:hover{
- cursor:pointer;
- opacity:1;
+.portfolio-img img:hover {
+    cursor: pointer;
+    opacity: 1;
 }
 
 .all-images {
@@ -189,9 +245,40 @@ h2 {
     animation: image-fade-in .5s;
 }
 
-.project-title:hover{
-    opacity:1;
+.project-title:hover {
+    opacity: 1;
 }
+
+@media only screen and (max-width:768px) {
+    .all-images{
+        width:80%;
+    }
+
+    .portfolio-img img{
+        width:120px;
+        height:120px;
+    }
+
+    .project-title{
+        width: 121px;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    .four-images{
+      flex-direction:column;
+      margin:0 auto;
+    }
+
+    .portfolio-img img{
+        width:220px;
+        height:220px;
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+}
+
+
 
 /* ________________________ CONTACT _________________________ */
 
@@ -238,4 +325,11 @@ footer p {
     color: white;
     padding-bottom: 10px;
     font-size: 10px;
+}
+
+@media only screen and (max-width:768px) {
+
+   footer{
+        width:100%;
+    }
 }
