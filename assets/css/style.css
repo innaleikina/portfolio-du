@@ -34,9 +34,10 @@ h2 {
     width: 960px;
     margin: 0 auto;
     align-items: center;
+    /* border:1px red solid; */
 }
 
-#name {
+#name-container {
     background-color: #4aaaa5;
     height: 100%;
     font-size: 24px;
@@ -107,57 +108,50 @@ h2 {
     line-height: 1.5rem;
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:975px) {
     #navigation {
-        width:100%;
+        width: 100%;
     }
-
-    #content-all{
-        width:90%;
+    #content-all {
+        width: 90%;
+        /* border:1px blue solid; */
     }
-
-    #pic-bio{
-        width:80%;
+    #pic-bio {
+        width: 80%;
     }
 }
 
 @media only screen and (max-width:640px) {
     #navigation {
-       flex-direction:column;
-       width:100%;
-       /* border:1px red solid; */
-       justify-content:flex-start;
-       align-items:flex-start;
+        flex-direction: column;
+        width: 100%;
+        /* border:1px red solid; */
+        justify-content: flex-start;
+        align-items: flex-start;
     }
-   
-
-    #name{
-        text-align:center;
-        margin-bottom:20px;
-        width:91.3vw;
+    #name-container {
+        text-align: center;
+        margin-bottom: 20px;
+        width: 95%;
         /* border:1px purple solid; */
     }
-
-    nav{
-        display:flex;
-        justify-content:center;
-        margin-bottom:10px;
-        justify-content:center;
+    nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+        justify-content: center;
         /* border:1px red solid; */
-        width:100%;
+        width: 100%;
     }
-
-    #content-container{
-        display:flex;
-        flex-direction:column;
-        margin:0 auto;
+    #content-container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
     }
-
     #pic {
-        margin:0 auto;
+        margin: 0 auto;
     }
 }
-
 
 /* ________________________ PORTFOLIO _________________________ */
 
@@ -209,6 +203,16 @@ h2 {
     animation: image-fade-in 1.5s;
 }
 
+@media only screen and (max-width:975px) {
+    .all-images {
+        flex-direction: row;
+    }
+    .four-images {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .portfolio-img img:hover {
     cursor: pointer;
     opacity: 1;
@@ -222,6 +226,13 @@ h2 {
     flex-direction: column;
     margin-top: 10px;
     padding-bottom: 20px;
+}
+
+@media only screen and (max-width:975px) {
+    .all-images {
+        flex-direction: row;
+        justify-content:space-around;
+    }
 }
 
 .four-images {
@@ -249,40 +260,34 @@ h2 {
     opacity: 1;
 }
 
-@media only screen and (max-width:768px) {
-    .all-images{
-        width:80%;
+@media only screen and (max-width:640px) {
+    .all-images {
+        width: 80%;
     }
-
-    .portfolio-img img{
-        width:120px;
-        height:120px;
+    .portfolio-img img {
+        width: 120px;
+        height: 120px;
     }
-
-    .project-title{
+    .project-title {
         width: 121px;
     }
 }
 
-@media only screen and (max-width:768px) {
-    .four-images{
-      flex-direction:column;
-      margin:0 auto;
+@media only screen and (max-width:640px) {
+    .four-images {
+        flex-direction: column;
+        margin: 0 auto;
     }
-
-    .portfolio-img img{
-        width:220px;
-        height:220px;
-        margin-top:5px;
-        margin-bottom:5px;
+    .portfolio-img img {
+        width: 220px;
+        height: 220px;
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
-
-    .project-title{
+    .project-title {
         width: 221px;
     }
 }
-
-
 
 /* ________________________ CONTACT _________________________ */
 
@@ -300,6 +305,18 @@ input {
     height: 20px;
 }
 
+@media only screen and (max-width:640px) {
+    input {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width:640px) {
+    input {
+        width: 100%;
+    }
+}
+
 textarea {
     height: 140px;
 }
@@ -313,6 +330,25 @@ button {
     color: white;
     letter-spacing: 2px;
     font-size: 12px;
+    transition: .2s all;
+}
+
+button:hover {
+    background-color: white;
+    color: #4aaaa5;
+    border: 1px #4aaaa5 solid;
+    outline: 0;
+}
+
+button:active {
+    background-color: #4aaaa5;
+    color: white;
+    padding: 12px;
+    outline: 0;
+}
+
+button:focus {
+    outline: 0;
 }
 
 footer {
@@ -331,9 +367,14 @@ footer p {
     font-size: 10px;
 }
 
-@media only screen and (max-width:768px) {
-
-   footer{
-        width:100%;
+@media only screen and (max-width:640px) {
+    footer {
+        width: 100%;
     }
 }
+
+/* * {
+        background: #000 !important;
+        color: #0f0 !important;
+        outline: solid #f00 1px !important;
+    } */
